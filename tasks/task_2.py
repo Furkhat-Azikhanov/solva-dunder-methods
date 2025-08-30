@@ -10,4 +10,18 @@
 
 
 class Circle:
-    pass
+    def __init__(self, radius):
+    
+        self.radius = radius
+
+    def __str__(self):
+    
+        return f"Circle with radius: {self.radius}"
+
+    def __lt__(self, other):
+      
+        return self.radius < other.radius
+
+    def __mul__(self, value):
+       
+        return Circle(self.radius * value)

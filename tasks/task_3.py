@@ -10,4 +10,14 @@
 
 
 class Temperature:
-    pass
+    def __init__(self, value):
+        self.value = value
+
+    def __float__(self):
+        return float(self.value)
+
+    def __add__(self, other):
+        return Temperature(self.value + other.value)
+
+    def __repr__(self):
+        return f"Temperature({self.value}°C)"

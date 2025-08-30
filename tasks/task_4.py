@@ -10,4 +10,14 @@
 
 
 class CustomList:
-    pass
+    def __init__(self, items):
+        self.items = items
+
+    def __len__(self):
+        return len(self.items)
+
+    def __getitem__(self, index):
+        return self.items[index]
+
+    def __contains__(self, value):
+        return value in self.items
